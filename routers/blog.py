@@ -14,7 +14,7 @@ async def blog_home(request: Request):
     context = {
         "request": request,
     }
-    return templates.TemplateResponse("blog/in2dex.html", context)
+    return templates.TemplateResponse("blog/index.html", context)
 
 
 @router.get("/edit", response_class=HTMLResponse)
