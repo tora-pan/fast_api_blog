@@ -7,10 +7,20 @@
   <title>ToraPan - Blog</title>
 </head>
 <body>
+  <nav>
+    <div class="container">
+      <a href="{{ url_for('home') }}">Home</a>
+      <a href="{{ url_for('blog_home') }}">Blog</a>
+      <a href="#">
+        <button>Light|Dark</button>
+      </a>
+    </div>
+  </nav>
+  
   <div class="container">
 
     {% block content %}
     {% endblock %}
   </div>
-  </body>
+</body>
 </html>

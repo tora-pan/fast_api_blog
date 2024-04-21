@@ -21,6 +21,7 @@ async def blog_home(request: Request):
 async def blog_edit(request: Request):
     context = {
         "request": request,
+        "blog": None,
     }
     return templates.TemplateResponse("blog/edit.html", context)
 
@@ -29,6 +30,6 @@ async def blog_edit(request: Request):
 async def blog_edit_id(request: Request, blog_id: int):
     context = {
         "request": request,
-        "blog_id": blog_id
+        "blog": blog_id
     }
     return templates.TemplateResponse("blog/edit.html", context)

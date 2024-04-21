@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="section center">
+
+</div>
+{% if blog %}
+  <h1>Blog {{ blog}} Edit</h1>
+{% else %}
+  <h1 class="center">Add Blog</h1>
+  <a href="{{ url_for('blog_edit') }}">
+    <button class="btn">Add Blog</button>
+  </a>
+{% endif %}
+{% endblock %}
